@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+.html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Inter", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -589,6 +592,92 @@ h5 {
   margin-top: 40px;
 }
 
+.overlay {
+  /* background: #c1c7d0; */
+  background: #637fa8;
+  /* mix-blend-mode: multiply; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.popup-contents{
+  background-color: #ebf0ee;
+  border-radius: 10px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.ul-popup {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0px;
+  gap: 10px;
+}
+
+.li-popup {
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3a4a42;
+  padding: 8px 12px;
+
+}
+
+.popup-pic {
+  background-image: url(../images/popup-mobile.svg);
+  width: 100%;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.popup-title h2 {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  padding: 10px 0px;
+  color: #172b4d;
+}
+
+.popup-description {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+  padding: 10px 0;
+}
+
+.popup-source, .popup-live {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: #36b37f;
+  border-radius: 4px;
+  color: #fff;
+  width: 40%;
+  border: 0px;
+  font-size: 16px;
+}
+
+.popup-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.see-popup{
+  width: 18px;
+  height: 20px;
+}
 .languaged {
   max-width: 337px;
   height: 96px;
@@ -650,6 +739,10 @@ h5 {
   gap: 24px;
 }
 
+/* .ov-dk{
+  display: none;
+} */
+
 @media (min-width: 768px) {
   .form {
     display: flex;
@@ -657,6 +750,30 @@ h5 {
     margin: auto;
     padding: 80px 0;
   }
+
+  .popup-title {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .popup-div{
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .popup-pic {
+    background-image: url(../images/popup-desktop.svg);
+    width: 100%;
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* .ov-mv{
+    display: none;
+  } */
 }
 
 @media (max-width: 768px) {
