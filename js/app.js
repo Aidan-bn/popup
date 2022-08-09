@@ -71,7 +71,15 @@ userMsg.value = user.msg;
 
 const cards = [
   {
-    post:'Multi-Post Stories<br> Gain + Glory',
+    id: 1,
+    image1: './images/popup-desktop.svg',
+    image2: './images/popup-mobile.svg',
+    tittle: 'Keeping track of hundreds of components',
+    languages: ['Ruby on rails', 'css', 'Javascript'],
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    post: 'Multi-Post Stories <br> Gain + Glory',
+    live: "url('https://google.com')",
+    source: "url('https://github.com')",
     tagone: 'Rubby on rails',
     tagtwo: 'css',
     tagthree: 'JavaScript',
@@ -79,7 +87,15 @@ const cards = [
     btn: 'See Project',
   },
   {
-    post:'Multi-Post Stories<br> Gain + Glory',
+    id: 2,
+    image1: './images/popup-desktop.svg',
+    image2: './images/popup-mobile.svg',
+    tittle: 'Keeping track of hundreds of components',
+    languages: ['Ruby on rails', 'css', 'Javascript'],
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    post: 'Multi-Post Stories <br> Gain + Glory',
+    live: "url('https://google.com')",
+    source: "url('https://github.com')",
     tagone: 'Rubby on rails',
     tagtwo: 'css',
     tagthree: 'JavaScript',
@@ -87,7 +103,15 @@ const cards = [
     btn: 'See Project',
   },
   {
-    post:'Multi-Post Stories<br> Gain + Glory',
+    id: 3,
+    image1: './images/popup-desktop.svg',
+    image2: './images/popup-mobile.svg',
+    tittle: 'Keeping track of hundreds of components',
+    languages: ['Ruby on rails', 'css', 'Javascript'],
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    post: 'Multi-Post Stories <br> Gain + Glory',
+    live: "url('https://google.com')",
+    source: "url('https://github.com')",
     tagone: 'Rubby on rails',
     tagtwo: 'css',
     tagthree: 'JavaScript',
@@ -95,7 +119,15 @@ const cards = [
     btn: 'See Project',
   },
   {
-    post:'Multi-Post Stories<br> Gain + Glory',
+    id: 4,
+    image1: './images/popup-desktop.svg',
+    image2: './images/popup-mobile.svg',
+    tittle: 'Keeping track of hundreds of components',
+    languages: ['Ruby on rails', 'css', 'Javascript'],
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    post: 'Multi-Post Stories <br> Gain + Glory',
+    live: "url('https://google.com')",
+    source: "url('https://github.com')",
     tagone: 'Rubby on rails',
     tagtwo: 'css',
     tagthree: 'JavaScript',
@@ -103,7 +135,15 @@ const cards = [
     btn: 'See Project',
   },
   {
-    post:'Multi-Post Stories<br> Gain + Glory',
+    id: 5,
+    image1: './images/popup-desktop.svg',
+    image2: './images/popup-mobile.svg',
+    tittle: 'Keeping track of hundreds of components',
+    languages: ['Ruby on rails', 'css', 'Javascript'],
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    post: 'Multi-Post Stories <br> Gain + Glory',
+    live: "url('https://google.com')",
+    source: "url('https://github.com')",
     tagone: 'Rubby on rails',
     tagtwo: 'css',
     tagthree: 'JavaScript',
@@ -111,7 +151,15 @@ const cards = [
     btn: 'See Project',
   },
   {
-    post:'Multi-Post Stories<br> Gain + Glory',
+    id: 6,
+    image1: './images/popup-desktop.svg',
+    image2: './images/popup-mobile.svg',
+    tittle: 'Keeping track of hundreds of components',
+    languages: ['Ruby on rails', 'css', 'Javascript'],
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    post: 'Multi-Post Stories <br> Gain + Glory',
+    live: "url('https://google.com')",
+    source: "url('https://github.com')",
     tagone: 'Rubby on rails',
     tagtwo: 'css',
     tagthree: 'JavaScript',
@@ -138,12 +186,40 @@ cards.map((card) => {
             </ul>
         </div>
         <div class="action">
-            <button class="btn-action">${card.btn}</button>
+            <button class="btn-action" id=${cards.id} onClick=popup(${card.id})>${card.btn}</button>
         </div>
     </div>
   </div>
 `;
   return item;
 });
-
 workDiv.innerHTML = item;
+
+// const popupWindow = document.getElementById('window');
+ 
+popup = (projectId) => {
+  let popupInfo ='';
+  const modal = document.getElementById('window');
+  const card = cards[projectId - 1];
+//   let languages = '';
+//   card.languages.forEach((element) => {
+//  languages += `<li class="li-popup">${element}</li>`;
+//   });
+
+  popupInfo = `
+  <div class="overlay">
+        <h1>${card.tittle}</h1>
+     </div> `;
+//  return popupInfo;
+ modal.innerHTML = popupInfo;
+   modal.style.display = 'block';
+};
+
+//  popup.innerHTML = item;
+
+//  const modal = document.getElementById('window');
+//  document.onclick = (e) => {
+//    if (e.target === modal) {
+//      modal.style.display = 'none';
+//    }
+//  };

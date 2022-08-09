@@ -54,14 +54,17 @@
                <h4>My Recent Works</h4>
            </div>
            <div id="work-grid">
-              <!--Dynamic section-->   
+              <!--Dynamic section--> 
+              <div class="window" id="window">
+
+              </div>  
             </div>
             
        </section>
    </main>
 
-   
-   <div class="overlay ov-mv">
+ <!--Overlay desk-->  
+   <!-- <div class="overlay ov-mv">
         <div class="popup-contents">
             <div class="popup-pic">
             </div>
@@ -93,10 +96,10 @@
                 </button>
             </div>
         </div>
-    </div> 
+    </div>  -->
 
 
-
+<!--Overlay desk-->
     <div class="overlay ov-dk">
         <div class="popup-contents">
             <div class="popup-pic">
@@ -112,8 +115,7 @@
                         See Source
                         <a href="www.google.com"><img src="./images/see-git.svg" class="see-popup"></a>
                     </button>
-                </div>
-                
+                </div>  
             </div>
             <ul class="ul-popup">
                 <li class="li-popup">Codekit</li>
@@ -131,14 +133,10 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
             </div>
-            
-            
+<!--Overlay desk-->                    
         </div>
     </div>
-
-
-
-
+<!--Overlay desk-->
     <section class="aboutme" id="aboutme">
        <div class="about">
            <h4>About me</h4>
@@ -231,8 +229,7 @@
                <input type="email" id="email" placeholder="Email address" name="email" class="email" onchange="changeHandler()" required>
                <textarea placeholder="Type something" id="message" name="textarea" onchange="changeHandler()" required></textarea>
                <span id="warning" ></span>
-               <button class="btn-primary" id="send">Get in touch</button>
-               
+               <button class="btn-primary" id="send">Get in touch</button>     
            </form>
        </div>  
    </section> 
@@ -258,9 +255,38 @@
            <a href="" >bantezea@gmail.com</a>
        </div>
        <div class="mobile-line">
-
        </div>
    </section>
    <script src="/js/app.js"></script>
 </body>
 </html>
+
+
+
+
+
+<!-- 
+<div class="popup-contents">
+    <div class="popup-pic">
+   </div>
+    <div class="popup-title">
+        <h2>${cards.tittle}</h2>
+        <ul class="ul-popup">
+            ${techn}
+       </ul>
+    </div>
+    <div class="popup-description">
+        <p>${description}</p>
+    </div>
+   
+    <div class="popup-div">
+        <button class="popup-live">
+            See Live
+            <a href=""><img src="./images/see-live.svg" class="see-popup"></a>
+        </button>
+        <button class="popup-source">
+            See Source
+            <a href="www.google.com"><img src="./images/see-git.svg" class="see-popup"></a>
+        </button>
+    </div>
+</div> -->
