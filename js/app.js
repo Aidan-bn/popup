@@ -1,58 +1,59 @@
 function hamburger() {
-  const hamburgerMenu = document.getElementsByClassName('nav-icon');
-  const hamburgerMenuExit = document.getElementsByClassName('close');
-  const hamburgerMenuItems = document.getElementsByClassName('hamburger-list');
+  const hamburgerMenu = document.getElementsByClassName("nav-icon");
+  const hamburgerMenuExit = document.getElementsByClassName("close");
+  const hamburgerMenuItems = document.getElementsByClassName("hamburger-list");
 
-  hamburgerMenu[0].addEventListener('click', () => {
-    document.getElementsByClassName('menu')[0].style.display = 'flex';
+  hamburgerMenu[0].addEventListener("click", () => {
+    document.getElementsByClassName("menu")[0].style.display = "flex";
   });
 
-  hamburgerMenuExit[0].addEventListener('click', () => {
-    document.getElementsByClassName('menu')[0].style.display = 'none';
+  hamburgerMenuExit[0].addEventListener("click", () => {
+    document.getElementsByClassName("menu")[0].style.display = "none";
   });
 
   [...hamburgerMenuItems].forEach((element) => {
-    element.addEventListener('click', () => {
-      document.getElementsByClassName('menu')[0].style.display = 'none';
+    element.addEventListener("click", () => {
+      document.getElementsByClassName("menu")[0].style.display = "none";
     });
   });
 }
 hamburger();
 
-const btnSubmit = document.getElementById('send');
-const inputEmail = document.getElementById('email');
-const EMAIL_CASE_CHECK = 'Email adress should be in lower case';
-const EMAIL_CHECK = 'Enter valid email';
-const error = document.getElementById('warning');
+const btnSubmit = document.getElementById("send");
+const inputEmail = document.getElementById("email");
+const EMAIL_CASE_CHECK = "Email adress should be in lower case";
+const EMAIL_CHECK = "Enter valid email";
+const error = document.getElementById("warning");
 
-btnSubmit.addEventListener('click', (e) => {
-  const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+btnSubmit.addEventListener("click", (e) => {
+  const validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const address = inputEmail.value;
   if (address === address.toLowerCase()) {
     if (validRegex.test(address)) {
-      error.classList.remove('.alert');
-      error.classList.add('.off-alert');
+      error.classList.remove(".alert");
+      error.classList.add(".off-alert");
     } else {
       error.innerHTML = `<span id="warning">${EMAIL_CHECK}</span>`;
       e.preventDefault();
-      error.classList.add('.alert');
-      error.classList.remove('.off-alert');
+      error.classList.add(".alert");
+      error.classList.remove(".off-alert");
     }
   } else {
     e.preventDefault();
     error.innerHTML = `<span id="warning">${EMAIL_CASE_CHECK}</span>`;
-    error.classList.add('.alert');
-    error.classList.remove('.off-alert');
+    error.classList.add(".alert");
+    error.classList.remove(".off-alert");
   }
   setTimeout(() => {
-    error.classList.remove('.alert');
-    error.classList.add('.off-alert');
+    error.classList.remove(".alert");
+    error.classList.add(".off-alert");
   }, 100);
 });
 
-const userName = document.getElementById('fullname');
-const userEmail = document.getElementById('email');
-const userMsg = document.getElementById('message');
+const userName = document.getElementById("fullname");
+const userEmail = document.getElementById("email");
+const userMsg = document.getElementById("message");
 
 changeHandler = () => {
   const userData = {
@@ -60,10 +61,10 @@ changeHandler = () => {
     email: userEmail.value,
     msg: userMsg.value,
   };
-  localStorage.setItem('userInfo', JSON.stringify(userData));
+  localStorage.setItem("userInfo", JSON.stringify(userData));
 };
 
-const user = JSON.parse(window.localStorage.getItem('userInfo'));
+const user = JSON.parse(window.localStorage.getItem("userInfo"));
 
 userName.value = user.name;
 userEmail.value = user.email;
@@ -72,104 +73,110 @@ userMsg.value = user.msg;
 const cards = [
   {
     id: 1,
-    image1: './images/popup-desktop.svg',
-    image2: './images/popup-mobile.svg',
-    tittle: 'Keeping track of hundreds of components',
-    languages: ['Ruby on rails', 'css', 'Javascript'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    post: 'Multi-Post Stories <br> Gain + Glory',
+    image1: "./images/popup-desktop.svg",
+    image2: "./images/popup-mobile.svg",
+    tittle: "Keeping track of hundreds of components",
+    languages: ["Ruby on rails", "css", "Javascript"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    post: "Multi-Post Stories <br> Gain + Glory",
     live: "url('https://google.com')",
     source: "url('https://github.com')",
-    tagone: 'Rubby on rails',
-    tagtwo: 'css',
-    tagthree: 'JavaScript',
-    tagfour: 'html',
-    btn: 'See Project',
+    tagone: "Rubby on rails",
+    tagtwo: "css",
+    tagthree: "JavaScript",
+    tagfour: "html",
+    btn: "See Project",
   },
   {
     id: 2,
-    image1: './images/popup-desktop.svg',
-    image2: './images/popup-mobile.svg',
-    tittle: 'Keeping track of hundreds of components',
-    languages: ['Ruby on rails', 'css', 'Javascript'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    post: 'Multi-Post Stories <br> Gain + Glory',
+    image1: "./images/popup-desktop.svg",
+    image2: "./images/popup-mobile.svg",
+    tittle: "Keeping track of hundreds of components",
+    languages: ["Ruby on rails", "css", "Javascript"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    post: "Multi-Post Stories <br> Gain + Glory",
     live: "url('https://google.com')",
     source: "url('https://github.com')",
-    tagone: 'Rubby on rails',
-    tagtwo: 'css',
-    tagthree: 'JavaScript',
-    tagfour: 'html',
-    btn: 'See Project',
+    tagone: "Rubby on rails",
+    tagtwo: "css",
+    tagthree: "JavaScript",
+    tagfour: "html",
+    btn: "See Project",
   },
   {
     id: 3,
-    image1: './images/popup-desktop.svg',
-    image2: './images/popup-mobile.svg',
-    tittle: 'Keeping track of hundreds of components',
-    languages: ['Ruby on rails', 'css', 'Javascript'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    post: 'Multi-Post Stories <br> Gain + Glory',
+    image1: "./images/popup-desktop.svg",
+    image2: "./images/popup-mobile.svg",
+    tittle: "Keeping track of hundreds of components",
+    languages: ["Ruby on rails", "css", "Javascript"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    post: "Multi-Post Stories <br> Gain + Glory",
     live: "url('https://google.com')",
     source: "url('https://github.com')",
-    tagone: 'Rubby on rails',
-    tagtwo: 'css',
-    tagthree: 'JavaScript',
-    tagfour: 'html',
-    btn: 'See Project',
+    tagone: "Rubby on rails",
+    tagtwo: "css",
+    tagthree: "JavaScript",
+    tagfour: "html",
+    btn: "See Project",
   },
   {
     id: 4,
-    image1: './images/popup-desktop.svg',
-    image2: './images/popup-mobile.svg',
-    tittle: 'Keeping track of hundreds of components',
-    languages: ['Ruby on rails', 'css', 'Javascript'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    post: 'Multi-Post Stories <br> Gain + Glory',
+    image1: "./images/popup-desktop.svg",
+    image2: "./images/popup-mobile.svg",
+    tittle: "Keeping track of hundreds of components",
+    languages: ["Ruby on rails", "css", "Javascript"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    post: "Multi-Post Stories <br> Gain + Glory",
     live: "url('https://google.com')",
     source: "url('https://github.com')",
-    tagone: 'Rubby on rails',
-    tagtwo: 'css',
-    tagthree: 'JavaScript',
-    tagfour: 'html',
-    btn: 'See Project',
+    tagone: "Rubby on rails",
+    tagtwo: "css",
+    tagthree: "JavaScript",
+    tagfour: "html",
+    btn: "See Project",
   },
   {
     id: 5,
-    image1: './images/popup-desktop.svg',
-    image2: './images/popup-mobile.svg',
-    tittle: 'Keeping track of hundreds of components',
-    languages: ['Ruby on rails', 'css', 'Javascript'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    post: 'Multi-Post Stories <br> Gain + Glory',
+    image1: "./images/popup-desktop.svg",
+    image2: "./images/popup-mobile.svg",
+    tittle: "Keeping track of hundreds of components",
+    languages: ["Ruby on rails", "css", "Javascript"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    post: "Multi-Post Stories <br> Gain + Glory",
     live: "url('https://google.com')",
     source: "url('https://github.com')",
-    tagone: 'Rubby on rails',
-    tagtwo: 'css',
-    tagthree: 'JavaScript',
-    tagfour: 'html',
-    btn: 'See Project',
+    tagone: "Rubby on rails",
+    tagtwo: "css",
+    tagthree: "JavaScript",
+    tagfour: "html",
+    btn: "See Project",
   },
   {
     id: 6,
-    image1: './images/popup-desktop.svg',
-    image2: './images/popup-mobile.svg',
-    tittle: 'Keeping track of hundreds of components',
-    languages: ['Ruby on rails', 'css', 'Javascript'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    post: 'Multi-Post Stories <br> Gain + Glory',
+    image1: "./images/popup-desktop.svg",
+    image2: "./images/popup-mobile.svg",
+    tittle: "Keeping track of hundreds of components",
+    languages: ["Ruby on rails", "css", "Javascript"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    post: "Multi-Post Stories <br> Gain + Glory",
     live: "url('https://google.com')",
     source: "url('https://github.com')",
-    tagone: 'Rubby on rails',
-    tagtwo: 'css',
-    tagthree: 'JavaScript',
-    tagfour: 'html',
-    btn: 'See Project',
+    tagone: "Rubby on rails",
+    tagtwo: "css",
+    tagthree: "JavaScript",
+    tagfour: "html",
+    btn: "See Project",
   },
 ];
 
-const workDiv = document.getElementById('work-grid');
-let item = '';
+const workDiv = document.getElementById("work-grid");
+let item = "";
 cards.map((card) => {
   item += `
   <div class="card">
@@ -196,23 +203,46 @@ cards.map((card) => {
 workDiv.innerHTML = item;
 
 // const popupWindow = document.getElementById('window');
- 
+
 popup = (projectId) => {
-  let popupInfo ='';
-  const modal = document.getElementById('window');
+  let popupInfo = "";
+  /* megha changes */
+  const projectDetailsModal = document.getElementById("projectDetailsModal");
+  /* alert(projectDetailsModal); */
   const card = cards[projectId - 1];
-//   let languages = '';
-//   card.languages.forEach((element) => {
-//  languages += `<li class="li-popup">${element}</li>`;
-//   });
+  //   let languages = '';
+  //   card.languages.forEach((element) => {
+  //  languages += `<li class="li-popup">${element}</li>`;
+  //   });
 
   popupInfo = `
-  <div class="overlay">
-        <h1>${card.tittle}</h1>
-     </div> `;
-//  return popupInfo;
- modal.innerHTML = popupInfo;
-   modal.style.display = 'block';
+ <div class="innerdiv">
+    <div class="popup-title">
+        <h2>${card.tittle}</h2>
+        <ul class="ul-popup">
+            
+       </ul>
+    </div>
+    <div class="popup-description">
+        <p>${card.description}</p>
+    </div>
+   
+    <div class="popup-div">
+        <button class="popup-live">
+            See Live
+            <a href=""><img src="./images/see-live.svg" class="see-popup"></a>
+        </button>
+        <button class="popup-source">
+            See Source
+            <a href="www.google.com"><img src="./images/see-git.svg" class="see-popup"></a>
+        </button>
+    </div>
+</div> 
+     </div>
+    </div>  `;
+  //  return popupInfo;
+  projectDetailsModal.innerHTML = popupInfo;
+  projectDetailsModal.style.display = "block";
 };
 
 //  popup.innerHTML = item;
